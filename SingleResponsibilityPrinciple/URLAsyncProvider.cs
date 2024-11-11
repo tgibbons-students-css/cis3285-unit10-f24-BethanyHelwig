@@ -31,5 +31,14 @@ namespace SingleResponsibilityPrinciple
             IEnumerable<string> tradeList = task.Result;
             return tradeList;
         }
+
+        // TO DO : CODING TROUBLE
+        // Still unsure how to read the code from before to make this work,
+        // Much less how to change it so it's reading in line by line
+        public async IAsyncEnumerable<string> GetTradeDataAsync()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

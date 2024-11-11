@@ -22,5 +22,10 @@ namespace SingleResponsibilityPrinciple
 
             return lines;
         }
+
+        public IAsyncEnumerable<string> GetTradeDataAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

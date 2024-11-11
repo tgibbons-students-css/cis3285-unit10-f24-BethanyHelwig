@@ -28,6 +28,19 @@ namespace SingleResponsibilityPrinciple
             return tradeData;
         }
 
+        public async IAsyncEnumerable<string> GetTradeDataAsync()
+        {
+            logger.LogInfo("Reading trades from file stream.");
+            using (var reader = new StreamReader(stream))
+            {
+                string line;
+                while ((line = await reader.ReadLineAsync()) != null)
+                {
+                    yield return line;
+                }
+            }
+        }
+
         private readonly Stream stream;
         private readonly ILogger logger;
     }
